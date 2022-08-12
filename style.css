@@ -1,0 +1,270 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins';
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+.fullbox {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.Signup, .Signin {
+  padding: 6rem;
+  width: 100%;
+}
+
+.Signup {
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  pointer-events: all;
+  z-index: 1;
+}
+
+.Signin {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  -webkit-transition: all 0s ease 1s;
+  transition: all 0s ease 1s;
+}
+
+input {
+  border: none;
+  outline: unset;
+  width: 100%;
+  padding: 1.5rem 4rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  background-color: #ececec;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+input:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+input::-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.button {
+  padding: .85rem 3rem;
+  border-radius: 50px;
+  background-color: #4d84e2;
+  border: none;
+  color: white;
+  outline: 0;
+}
+
+.button:hover {
+  color: #4d84e2;
+  background-color: white;
+}
+
+.lefttransition, .righttransition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: center;
+  padding: 7rem;
+  gap: 1rem;
+  -webkit-transition: -webkit-transform 1s ease 400ms;
+  transition: -webkit-transform 1s ease 400ms;
+  transition: transform 1s ease 400ms;
+  transition: transform 1s ease 400ms, -webkit-transform 1s ease 400ms;
+}
+
+.fullbox::before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.transition {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.righttransition {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 7;
+}
+
+.image {
+  width: 100%;
+  z-index: 7;
+  -webkit-transition: -webkit-transform 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.textbox {
+  color: white;
+  -webkit-transition: -webkit-transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  z-index: 7;
+}
+
+.whitebtn {
+  border: 3px solid white;
+  padding: 0.5rem 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 50px;
+  margin: 2rem auto;
+  width: 50%;
+}
+
+.fullbox.animate::before {
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.fullbox.animate .Signup {
+  -webkit-transition: all 0ms ease-in 1s;
+  transition: all 0ms ease-in 1s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+}
+
+.fullbox.animate .Signin {
+  -webkit-transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
+  z-index: 1;
+}
+
+.fullbox.animate .lefttransition .textbox {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+
+.fullbox.animate .lefttransition .image {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+
+.fullbox.animate .righttransition {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  z-index: 7;
+}
+
+.fullbox.animate .righttransition .textbox {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  z-index: 7;
+}
+
+.fullbox.animate .righttransition .image {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  z-index: 7;
+}
+/*# sourceMappingURL=style.css.map */

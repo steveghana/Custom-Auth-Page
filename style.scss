@@ -1,0 +1,192 @@
+$primaryColor: #4d84e2;
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins";
+}
+h1 {
+  font-size: 2.2rem;
+}
+.fullbox {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.Signup,
+.Signin {
+  padding: 6rem;
+  width: 100%;
+  // transition: transform 5s ease-in;
+}
+.Signup {
+  // background-color: blue;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  pointer-events: all;
+  z-index: 1;
+}
+.Signin {
+  // background-color: brown;
+  transform: translateX(100%);
+  opacity: 0;
+  // transition: transform 1s ease-in 2s;
+  // z-index: 2;
+  transition: all 0s ease 1s;
+}
+
+input {
+  border: none;
+  outline: unset;
+  width: 100%;
+  padding: 1.5rem 4rem;
+  border-radius: 50px;
+
+  font-size: 1rem;
+  background-color: rgb(236, 236, 236);
+}
+input::placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.button {
+  padding: 0.85rem 3rem;
+  border-radius: 50px;
+  background-color: $primaryColor;
+  border: none;
+  color: rgb(255, 255, 255);
+  outline: 0;
+}
+.button:hover {
+  color: $primaryColor;
+  background-color: white;
+}
+
+.lefttransition,
+.righttransition {
+  // display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  // z-index: 6;
+  padding: 7rem;
+  //   background-color: royalblue;
+  gap: 1rem;
+  //   z-index: 6;
+
+  transition: transform 1s ease 400ms;
+}
+
+.fullbox::before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  transition: transform 1s ease-in-out;
+
+  border-radius: 50%;
+  z-index: 5;
+}
+.transition {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  //   z-index: 6;
+  // transition:transform 2s ease-in-out;
+}
+.righttransition {
+  transform: translateX(100%);
+  transition: transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 7;
+}
+.image {
+  width: 100%;
+  z-index: 7;
+  transition: transform 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition-delay: 0.2s;
+}
+.textbox {
+  color: white;
+  transition: transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition-delay: 0.3s;
+  z-index: 7;
+}
+.whitebtn {
+  border: 3px solid white;
+  padding: 0.5rem 2rem;
+  align-self: center;
+  border-radius: 50px;
+  margin: 2rem auto;
+  width: 50%;
+}
+
+.fullbox.animate::before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+.fullbox.animate {
+  .Signup {
+    transition: all 0ms ease-in 1s;
+
+    transform: translateX(-100%);
+
+    opacity: 0;
+  }
+  .Signin {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    transform: translateX(0%);
+    opacity: 1;
+    z-index: 1;
+  }
+  .lefttransition {
+    .textbox {
+      transform: translateX(-200%);
+    }
+    .image {
+      transform: translateX(-200%);
+    }
+  }
+  .righttransition {
+    transform: translateX(0%);
+    transition: transform 900ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition-delay: 0.3s;
+    z-index: 7;
+
+    .textbox {
+      transform: translateX(0%);
+      z-index: 7;
+    }
+    .image {
+      transform: translateX(0%);
+      z-index: 7;
+    }
+  }
+}
